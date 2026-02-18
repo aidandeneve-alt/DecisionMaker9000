@@ -1752,6 +1752,9 @@
                 }
             } catch (error) {
                 console.error('❌ Gemini API failed:', error);
+                
+                // SHOW GEMINI API FAILURE NOTIFICATION
+                showGeminiFailureNotification();
             }
             
             // SMART FALLBACK - INTELLIGENT LOCAL AI
@@ -1884,6 +1887,78 @@
                 confidence: confidence,
                 source: 'Local AI'
             };
+        }
+
+        // GEMINI API FAILURE NOTIFICATION
+        function showGeminiFailureNotification() {
+            // Create notification modal
+            const notificationHTML = `
+                <div id="gemini-failure-notification" style="
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+                    color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                    z-index: 10000;
+                    max-width: 400px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    border-left: 4px solid #ff4757;
+                ">
+                    <h3 style="margin: 0 0 10px 0; color: #ffeaa7;">⚠️ Gemini API Unavailable</h3>
+                    <p style="margin: 0 0 15px 0; line-height: 1.4;">
+                        <strong>Local Development Environment Detected</strong><br>
+                        The Gemini AI service is unavailable when running on localhost/ports due to CORS restrictions.
+                    </p>
+                    <p style="margin: 0 0 15px 0; line-height: 1.4;">
+                        <strong>🔧 Solution:</strong> Deploy to a real website or use our intelligent local AI system.
+                    </p>
+                    <div style="margin: 15px 0; text-align: center;">
+                        <button onclick="window.open('https://aidandeneve-alt.github.io/Info-center-help-center/', '_blank')" style="
+                            background: #007bff;
+                            color: white;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            font-size: 14px;
+                            margin-right: 10px;
+                        ">📞 Get Support</button>
+                        <button onclick="closeGeminiNotification()" style="
+                            background: #6c757d;
+                            color: white;
+                            border: none;
+                            padding: 10px 20px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            font-size: 14px;
+                        ">✅ Continue with Local AI</button>
+                    </div>
+                    <p style="margin: 15px 0 0 0; font-size: 12px; opacity: 0.8;">
+                        💡 <strong>Note:</strong> Our local AI system provides intelligent, context-aware suggestions even without external APIs.
+                    </p>
+                </div>
+            `;
+            
+            // Add notification to page
+            document.body.insertAdjacentHTML('beforeend', notificationHTML);
+            
+            // Auto-remove after 15 seconds
+            setTimeout(() => {
+                const notification = document.getElementById('gemini-failure-notification');
+                if (notification) {
+                    notification.remove();
+                }
+            }, 15000);
+        }
+
+        function closeGeminiNotification() {
+            const notification = document.getElementById('gemini-failure-notification');
+            if (notification) {
+                notification.remove();
+            }
         }
 
         // GEMINI AI API FUNCTION (PURE JAVASCRIPT)

@@ -1,0 +1,319 @@
+/* CRISIS MODAL STYLES - SEPARATE FILE */
+
+/* Crisis Support Overlay */
+.crisis-support-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 999999 !important;
+    backdrop-filter: blur(10px) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Crisis Support Modal */
+.crisis-support-modal {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa) !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    max-width: 800px !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    border: 2px solid #e74c3c !important;
+    position: relative !important;
+    animation: slideIn 0.3s ease-out !important;
+}
+
+/* Crisis Header */
+.crisis-header {
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    padding-bottom: 20px !important;
+    border-bottom: 2px solid #e74c3c !important;
+}
+
+.crisis-header h2 {
+    color: #e74c3c !important;
+    margin-bottom: 10px !important;
+    font-size: 2em !important;
+    font-weight: bold !important;
+}
+
+.crisis-header p {
+    color: #555 !important;
+    margin: 5px 0 !important;
+    font-size: 1.1em !important;
+}
+
+/* Crisis Options */
+.crisis-options {
+    margin-bottom: 25px !important;
+}
+
+.crisis-option {
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+    background: #f8f9fa !important;
+    border-radius: 15px !important;
+    border-left: 4px solid #3498db !important;
+}
+
+.crisis-option h3 {
+    color: #2c3e50 !important;
+    margin-bottom: 15px !important;
+    font-size: 1.3em !important;
+}
+
+/* Hotline Lists */
+.hotline-list {
+    display: grid !important;
+    gap: 15px !important;
+}
+
+.hotline-item {
+    background: white !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    border: 1px solid #ddd !important;
+    transition: all 0.3s ease !important;
+}
+
+.hotline-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Primary Hotline */
+.primary-hotline {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+    color: white !important;
+    border: 2px solid #e74c3c !important;
+    font-weight: bold !important;
+}
+
+.primary-hotline strong {
+    color: white !important;
+    font-size: 1.2em !important;
+}
+
+.primary-hotline em,
+.primary-hotline small {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Specialized Resources */
+.specialized {
+    background: linear-gradient(135deg, #6f42c1, #5a32a3) !important;
+    color: white !important;
+    border: 2px solid #6f42c1 !important;
+}
+
+.specialized strong {
+    color: white !important;
+    font-size: 1.1em !important;
+}
+
+.specialized em,
+.specialized small {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Hotline Item Styling */
+.hotline-item strong {
+    color: #2c3e50 !important;
+    font-size: 1.1em !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+.hotline-item em {
+    color: #666 !important;
+    font-style: italic !important;
+    display: block !important;
+    margin: 5px 0 !important;
+}
+
+.hotline-item small {
+    color: #666 !important;
+    font-style: italic !important;
+    font-size: 0.9em !important;
+}
+
+/* Immediate Actions */
+.crisis-immediate-actions {
+    background: #fff3cd !important;
+    padding: 25px !important;
+    border-radius: 15px !important;
+    border-left: 4px solid #ffc107 !important;
+    margin-bottom: 25px !important;
+}
+
+.crisis-immediate-actions h3 {
+    color: #856404 !important;
+    margin-bottom: 15px !important;
+    font-size: 1.3em !important;
+}
+
+.action-list {
+    display: grid !important;
+    gap: 10px !important;
+}
+
+.action-item {
+    background: white !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    border-left: 3px solid #ffc107 !important;
+}
+
+.action-item strong {
+    color: #856404 !important;
+    display: block !important;
+    margin-bottom: 5px !important;
+}
+
+.action-item small {
+    color: #666 !important;
+    font-size: 0.9em !important;
+}
+
+/* Hope Messages */
+.hope-messages {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+}
+
+.hope-message {
+    background: linear-gradient(135deg, #e8f5e8, #d4edda) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    font-style: italic !important;
+    color: #155724 !important;
+    border: 1px solid #c3e6cb !important;
+    font-weight: 500 !important;
+}
+
+/* Crisis Actions */
+.crisis-actions {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    margin-bottom: 25px !important;
+}
+
+.crisis-actions button {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 1em !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+}
+
+.crisis-actions button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* Crisis Disclaimer */
+.crisis-disclaimer {
+    background: #f8f9fa !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    border: 1px solid #dee2e6 !important;
+    margin-top: 20px !important;
+}
+
+.crisis-disclaimer p {
+    color: #6c757d !important;
+    margin: 0 !important;
+    font-size: 0.9em !important;
+    line-height: 1.5 !important;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0 !important;
+        transform: translateY(-50px) !important;
+    }
+    to {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .crisis-support-modal {
+        margin: 20px !important;
+        padding: 20px !important;
+        max-width: calc(100% - 40px) !important;
+    }
+    
+    .crisis-header h2 {
+        font-size: 1.5em !important;
+    }
+    
+    .crisis-actions {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .crisis-actions button {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+    
+    .hope-messages {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Ensure modal is visible - AGGRESSIVE OVERRIDES */
+.crisis-support-overlay {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+.crisis-support-overlay * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force override any hidden styles */
+.crisis-support-overlay[style*="display: none"],
+.crisis-support-overlay[style*="visibility: hidden"],
+.crisis-support-overlay[style*="opacity: 0"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Make sure modal is on top - ONLY when modal is open */
+body.crisis-modal-open {
+    overflow: hidden !important;
+}
+
+/* Prevent any other elements from covering */
+.crisis-support-overlay ~ * {
+    z-index: 1 !important;
+}
